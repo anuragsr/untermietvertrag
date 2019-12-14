@@ -1,0 +1,33 @@
+<h/>
+
+<main class="ctn-home">
+  <div class="ctn-main load">
+    <div class="container">
+      <div class="ctn-page" ng-bind-html="pages | trustedHTML">
+      </div>
+
+      <div class="ctn-btn" ng-show="docId">
+        <button ng-click="download()" class="btn btn-success">
+          <img src="img/download-icon.png" alt="">
+          <div>Als PDF Speichern</div>            
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade dl-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">        
+        <div class="modal-body">        
+          Click <a target="_blank" href="{{dlPath}}">here</a> to download the PDF
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<f/>
+<l ng-show="showLoader"/>

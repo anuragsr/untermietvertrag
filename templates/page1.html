@@ -1,0 +1,312 @@
+<div class="page">
+  <h4 class="font-weight-bold text-center doc-title">Untermietvertrag</h4>
+  
+  <div class="section" ng-click="doAdd($event)">
+    Zwischen
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+  
+  <div class="section" ng-click="doAdd($event)">
+    <span id="{{page.fields[0].id}}" placeholder="{{page.fields[0].p}}" class="edit" contenteditable ng-model="page.fields[0].v"></span><br/>
+    <span id="{{page.fields[1].id}}" placeholder="{{page.fields[1].p}}" class="edit" contenteditable ng-model="page.fields[1].v"></span><br/>
+    <span id="{{page.fields[2].id}}" placeholder="{{page.fields[2].p}}" class="edit" contenteditable ng-model="page.fields[2].v"></span><br/>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+  
+  <div class="section" ng-click="doAdd($event)">
+    nachfolgend „Hauptmieter“ genannt
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+  
+  <div class="section" ng-click="doAdd($event)">
+    und
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    <span id="{{page.fields[3].id}}" placeholder="{{page.fields[3].p}}" class="edit" contenteditable ng-model="page.fields[3].v"></span><br/>
+    <span id="{{page.fields[4].id}}" placeholder="{{page.fields[4].p}}" class="edit" contenteditable ng-model="page.fields[4].v"></span><br/>
+    <span id="{{page.fields[5].id}}" placeholder="{{page.fields[5].p}}" class="edit" contenteditable ng-model="page.fields[5].v"></span>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+        
+  <div class="section" ng-click="doAdd($event)">
+    nachfolgend „Untermieter“ genannt
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+  
+  <div class="section heading" ng-click="doAdd($event)">
+    § 1 (Mietsache)
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Die Wohnung des Hauptmieters befindet sich in der <span id="{{page.fields[6].id}}" placeholder="{{page.fields[6].p}}" class="edit" contenteditable ng-model="page.fields[6].v" ></span>
+    in <span id="{{page.fields[7].id}}" placeholder="{{page.fields[7].p}}" class="edit" contenteditable ng-model="page.fields[7].v" ></span>
+    in der <span id="{{page.fields[8].id}}" placeholder="{{page.fields[8].p}}" class="edit" contenteditable ng-model="page.fields[8].v" ></span>
+    Etage. Es wird ein Raum zu Wohnzwecken und zur ausschließlichen Nutzung an 
+    den Untermieter vermietet. Der Vermieter hat der Untervermietung schriftlich zugestimmt.    
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+  
+  <div class="section" ng-click="doAdd($event)">
+    Die gesamte Wohnung besteht aus:<br/>
+    <span id="{{page.fields[9].id}}" placeholder="{{page.fields[9].p}}" class="edit" contenteditable ng-model="page.fields[9].v" ></span>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+  
+  <div class="section" ng-click="doAdd($event)">
+    Die Mitbenutzung folgender Räume wird vereinbart:<br/>
+    <span multiline id="{{page.fields[10].id}}" placeholder="{{page.fields[10].p}}" class="edit" ng-model="page.fields[10].v" contenteditable></span>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+  
+  <div class="section" ng-click="doAdd($event)">
+    Weitere Vereinbarungen: (z. B. zur Möblierung oder Anmietung von Stellplätzen etc.)<br/>
+    <span id="{{page.fields[11].id}}" placeholder="{{page.fields[11].p}}" class="edit" contenteditable ng-model="page.fields[11].v"></span>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="section" ng-click="doAdd($event)">
+    Dem Untermieter werden folgende Schlüssel ausgehändigt:<br/>
+    <span multiline id="{{page.fields[12].id}}" placeholder="{{page.fields[12].p}}" class="edit" contenteditable ng-model="page.fields[12].v"></span>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section heading" ng-click="doAdd($event)">§ 2 (Mietdauer)</div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Das Untermietverhältnis beginnt am <span id="{{page.fields[13].id}}" placeholder="{{page.fields[13].p}}" class="edit" contenteditable ng-model="page.fields[13].v" ></span>
+    und endet am <span id="{{page.fields[14].id}}" placeholder="{{page.fields[14].p}}" class="edit" contenteditable ng-model="page.fields[14].v" ></span>.
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Das Untermietverhältnis kann gemäß den gesetzlichen Bestimmungen 
+    gekündigt werden, sofern der Hauptmietvertrag nichts Gegenteiliges
+    besagt. Wird der Hauptmietvertrag aufgelöst, endet auch der Untermietvertrag.    
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section heading" ng-click="doAdd($event)">
+    § 3 (Miete und Nebenkosten)
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Die monatliche Kaltmiete beträgt <span id="{{page.fields[15].id}}" placeholder="{{page.fields[15].p}}" class="edit" contenteditable ng-model="page.fields[15].v" ></span>
+    Euro. Für die Nebenkosten fällt monatlich eine Pauschale in Höhe von <span id="{{page.fields[16].id}}" placeholder="{{page.fields[16].p}}" class="edit" contenteditable ng-model="page.fields[16].v" ></span> Euro an.
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Bezüglich der Abrechnung der Nebenkosten gilt der Hauptmietvertrag.
+    Ändern sich die betreffenden Posten (Miete, Nebenkosten) im Hauptmietvertrag,
+    kann der Hauptmieter die Änderungen beim Untermieter geltend machen.
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Die Gesamtmiete in Höhe von <span id="{{page.fields[17].id}}" placeholder="{{page.fields[17].p}}" class="edit" contenteditable ng-model="page.fields[17].v" ></span>
+    Euro ist monatlich im Voraus zu zahlen. Die Summe muss jedoch spätestens 
+    bis zum dritten Werktag des Monats auf folgendem Konto eingehen:
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    <span id="{{page.fields[18].id}}" placeholder="{{page.fields[18].p}}" class="edit" contenteditable ng-model="page.fields[18].v" ></span><br/>
+    <span id="{{page.fields[19].id}}" placeholder="{{page.fields[19].p}}" class="edit" contenteditable ng-model="page.fields[19].v" ></span><br/>
+    <span id="{{page.fields[20].id}}" placeholder="{{page.fields[20].p}}" class="edit" contenteditable ng-model="page.fields[20].v" ></span><br/>
+    <span id="{{page.fields[21].id}}" placeholder="{{page.fields[21].p}}" class="edit" contenteditable ng-model="page.fields[21].v" ></span>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="section heading" ng-click="doAdd($event)">
+    § 4 (Kaution)
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+  
+  <div class="section" ng-click="doAdd($event)">
+    Der Untermieter erbringt eine Kaution in Höhe von <span id="{{page.fields[22].id}}" placeholder="{{page.fields[22].p}}" class="edit" contenteditable ng-model="page.fields[22].v" ></span>
+    Euro, welche der Sicherung der Ansprüche des Hauptmieters dient.    
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section heading" ng-click="doAdd($event)">
+    § 5 (Bezugnahme auf den Hauptmietvertrag)
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Die im Hauptmietvertrag festgelegten Rechte und Pflichten gelten
+    auch für den Untermietvertrag, sofern nichts Gegenteiliges 
+    vereinbart wird. Der Hauptmietvertrag wird Bestandteil des 
+    Untermietvertrages. Der Hauptmietvertrag wird dem Untermieter
+    in Kopie ausgehändigt.
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Schönheitsreparaturen sind vom Untermieter entsprechend den im
+    Hauptmietvertrag festgelegten Regelungen durchzuführen.
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section heading" ng-click="doAdd($event)">
+    § 6 (Kündigung)
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Wurde der Untermietvertrag auf unbestimmte Zeit geschlossen, 
+    gelten die gesetzlichen Vorschriften bezüglich des Kündigungsrechtes 
+    des Hauptmieters. Bei Abschluss des Untermietvertrages auf bestimmte
+    Zeit kann vor Ablauf der Untermietzeit keine ordentliche Kündigung 
+    erfolgen. Der Untermieter kann bis zum dritten Werktag des Kalendermonats
+    zum Ablauf des übernächsten Kalendermonats kündigen. Gemäß den gesetzlichen
+    Vorschriften ist eine fristlose Kündigung zulässig.
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section heading" ng-click="doAdd($event)">
+    § 7 (Weitere Untervermietung)
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Eine Untervermietung durch den Untermieter ist nicht zulässig.
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="section heading" ng-click="doAdd($event)">
+    § 8 (Besondere Vereinbarungen)
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    <span id="{{page.fields[23].id}}" placeholder="{{page.fields[23].p}}" class="edit" contenteditable ng-model="page.fields[23].v" ></span>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section heading" ng-click="doAdd($event)">
+    § 9 (Schlussbestimmungen)
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+  
+  <div class="section" ng-click="doAdd($event)">
+    Änderungen bzw. Ergänzungen des Untermietvertrages bedürfen der
+    Schriftform. Sollte die Unwirksamkeit einzelner Bestimmungen 
+    dieses Vertrages eintreten, berührt dies nicht die übrigen 
+    Regelungen. Unwirksame Regelungen sind durch wirksame zu ersetzen. 
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+  
+  <div class="section heading" ng-click="doAdd($event)">
+    <span id="{{page.fields[24].id}}" placeholder="{{page.fields[24].p}}" class="edit" contenteditable ng-model="page.fields[24].v" ></span>, den <span id="{{page.fields[25].id}}" placeholder="{{page.fields[25].p}}" class="edit" contenteditable ng-model="page.fields[25].v" ></span>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Unterschrift Untervermietmieter <span id="{{page.fields[26].id}}" placeholder="{{page.fields[26].p}}" class="edit" contenteditable ng-model="page.fields[26].v" ></span>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section heading" ng-click="doAdd($event)">
+    __________________________
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section" ng-click="doAdd($event)">
+    Unterschrift Untermieter <span id="{{page.fields[27].id}}" placeholder="{{page.fields[27].p}}" class="edit" contenteditable ng-model="page.fields[27].v" ></span>
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+
+  <div class="section heading" ng-click="doAdd($event)">
+    __________________________
+    <div class="ctn-action" ng-click="remove($event)">
+      <i class="fa fa-trash"></i>
+    </div>
+  </div>
+</div>
+
+ 
+
+ 

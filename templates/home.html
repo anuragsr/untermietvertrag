@@ -1,0 +1,135 @@
+<h/>
+
+<main class="ctn-home">
+  <div class="sub-header">
+    <div class="inner">
+      <div class="s-item">
+        <div class="box no-mobile" ng-click="new(pages[0])">
+          <img src="img/new-icon.png" alt=""/>
+          <div>Neu</div>
+        </div>
+        <div class="box no-mobile">
+          <img src="img/paste-icon.png" alt=""/>
+          <div>Einfügen</div>
+        </div>
+        <div class="box ib">
+          <div class="inner">
+            <img ng-click="focus('prev')" src="img/arrow-left.png" class="inv"/>
+            <div class="text">{{filledFields}} / {{totalFields}}</div>
+            <img ng-click="focus('next')" src="img/arrow-right.png" class="inv"/>          
+          </div>
+          <div class="desc no-mobile">Pflichtfelder<br/>befüllt</div>
+        </div>
+      </div>
+      <div class="s-item no-mobile">
+        <div class="box cb">
+          <div ng-repeat="p in pages track by $index" ng-click="new(p)" ng-class="{'active': $index === idx}">
+            <img src="img/content.png" alt=""/>
+            <div>{{ p.title }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="s-item">
+        <div class="box ib no-mobile">
+          <div class="inner link" ng-click="save(true)" data-clipboard-text="{{ shareLink }}" title="{{ shareLink }}">
+            <i class="fa fa-link"></i>
+            <div class="text">{{ shareLink }}</div>        
+          </div>
+          <div class="desc">Dein Link<br/>(Klicken Sie, um zu kopieren)</div>
+        </div>
+        <div class="box no-mobile" ng-click="save()">
+          <img src="img/save-icon.png" alt=""/>
+          <div>Speichem</div>
+        </div>
+        <div class="box dl-btn" ng-click="download()">
+          <img class="no-mobile" src="img/download-icon.png" alt=""/>
+          <div>Herunterladen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="sub-header secondary no-desktop">
+    <div class="inner">
+      <div class="box dl-btn" ng-click="save()">
+        <img class="no-mobile" src="img/save-icon.png" alt=""/>
+        <div>Speichem</div>
+      </div>
+      <div class="box dl-btn" ng-click="add()">
+        <img class="no-mobile" src="img/download-icon.png" alt=""/>
+        <div>Textblock Hinzufügen</div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="ctn-main">
+    <div class="container">
+      <div class="ctn-page">
+        <ng-include src="page.tpl"></ng-include>
+      </div>
+
+      <div class="ctn-btn">
+        <button ng-click="download()" class="btn btn-success">
+          <img src="img/download-icon.png" alt="">
+          <div>Als PDF Speichern</div>            
+        </button>
+      </div>
+
+      <div class="ctn-link no-desktop">
+        <div>Als Link</div>
+        <div class="inner">
+          <i class="fa fa-link"></i>
+          <input id="cp" type="text" class="form-control" value="{{shareLink}}" />
+        </div>
+        <button class="btn btn-sm btn-default desc" ng-click="save(true)" data-clipboard-target="#cp">Kopieren</button>
+      </div>
+
+    </div>
+    <div class="ctn-float-box no-mobile">
+      <div class="inner">
+        <div class="bar" ng-style="{'width': filledFields * 100 / totalFields + '%'}"></div>
+        <div class="b-item">
+          <span>{{ (filledFields * 100 / totalFields).toFixed(0)}}<sup>%</sup></span>
+          <div>geschafft</div>
+        </div>
+        <div class="b-item">
+          <div class="inner">
+            <img ng-click="focus('prev')" src="img/arrow-left.png" class="inv"/>
+            <div class="text">{{filledFields}} / {{totalFields}}</div>
+            <img ng-click="focus('next')" src="img/arrow-right.png" class="inv"/>          
+          </div>
+          <div class="desc">Pflichtfelder<br/>befüllt</div>
+        </div>
+        <div class="b-item o hov" ng-click="add()">
+          Textblock Hinzufügen
+        </div>
+        <div class="b-item o">
+          {{(zoom * 100).toFixed(0)}}%&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="hov" ng-click="zoomFn('-')"><i class="fa fa-minus"></i></div>
+          <div class="hov" ng-click="zoomFn('+')"><i class="fa fa-plus"></i></div>
+        </div>
+        <div class="b-item b">
+          <button ng-click="download()" class="btn btn-success btn-block">
+            <img src="img/download-icon.png" alt="">
+            <div>Als PDF<br/>Speichern</div>            
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade dl-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">        
+        <div class="modal-body">        
+          Click <a target="_blank" href="{{dlPath}}">here</a> to download the PDF
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<f/>
+<l ng-show="showLoader"/>
