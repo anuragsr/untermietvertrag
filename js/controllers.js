@@ -1,16 +1,5 @@
 app.controller('HomeCtrl', function($scope, $compile, $timeout, utils){
-  var clipboard = new ClipboardJS('.ctn-link .desc, .inner.link')
-
-  clipboard.on('success', function(e) {
-    e.clearSelection()
-    alert('In die Zwischenablage kopiert - ' + e.text)
-  })
-
-  clipboard.on('error', function(e) {
-    alert('Beim Kopieren ist ein Fehler aufgetreten, bitte manuell kopieren.')
-  })
-
-  var s = $scope
+  var s = $scope, clipboard, clipboard_modal
   s.pages = [
     {
       title: 'Unter Mietvertrag',
@@ -77,6 +66,17 @@ app.controller('HomeCtrl', function($scope, $compile, $timeout, utils){
     s.totalFields = s.page.fields.length?s.page.fields.length:1
     s.zoom = 1
     utils.scroll(0)
+
+    clipboard = new ClipboardJS('.ctn-link .desc, .inner.link')
+
+    clipboard.on('success', function(e) {
+      e.clearSelection()
+      alert('In die Zwischenablage kopiert - ' + e.text)
+    })
+
+    clipboard.on('error', function(e) {
+      alert('Beim Kopieren ist ein Fehler aufgetreten, bitte manuell kopieren.')
+    })
   }
 
   s.new = function(p){
@@ -92,7 +92,8 @@ app.controller('HomeCtrl', function($scope, $compile, $timeout, utils){
       s.showLoader = false
       if(!isAuto){
         // Alert of saved successfully
-        alert(res.message)
+        // alert(res.message)
+        s.showPopup()
       }
     })
   }
@@ -174,7 +175,34 @@ app.controller('HomeCtrl', function($scope, $compile, $timeout, utils){
     })
   })
 
+  s.showPopup = function(){
+    $(".dl-modal-2").modal("show")
+  }
+
   doNew(s.pages[0])
+
+  $(function(){    
+    $.fn.modal.Constructor.prototype._enforceFocus = function() {}
+
+    // $(".dl-modal-2").modal("show")
+    $(".dl-modal-2").on("hidden.bs.modal", function() {
+      clipboard_modal && clipboard_modal.destroy()
+    })
+  
+    $(".dl-modal-2").on("shown.bs.modal", function() {
+      clipboard_modal = new ClipboardJS('.copy-btn')
+      clipboard_modal.on('success', function(e) {
+        e.clearSelection()
+        alert('In die Zwischenablage kopiert - ' + e.text)
+      })
+    
+      clipboard_modal.on('error', function(e) {
+        alert('Beim Kopieren ist ein Fehler aufgetreten, bitte manuell kopieren.')
+      })
+    })
+  })
+
+
 
 }).controller('LoadCtrl', function($scope, $stateParams, utils){
   // l($stateParams)

@@ -230,7 +230,7 @@ header .title {
   word-break: break-word;
   width: 80px;
   margin: 0 10px;
-  padding: 5px 10px;
+  padding: 5px 9px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -611,6 +611,145 @@ header .title {
 .ctn-home .ctn-main .ctn-link .inner i {
   margin-right: 10px;
   transform: scaleX(-1);
+}
+
+@media (min-width: 1024px) {
+  .dl-modal-2 .modal-dialog {
+    max-width: 50vw;
+  }
+}
+.dl-modal-2 .modal-dialog .modal-content {
+  border: none;
+}
+.dl-modal-2 .modal-dialog .modal-header {
+  border-bottom: none;
+}
+.dl-modal-2 .modal-dialog .modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 50px;
+}
+@media (max-width: 1024px) {
+  .dl-modal-2 .modal-dialog .modal-body {
+    padding-top: 0;
+  }
+}
+.dl-modal-2 .modal-dialog .modal-body h2 {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+@media (max-width: 1024px) {
+  .dl-modal-2 .modal-dialog .modal-body h2 {
+    font-size: 20px;
+  }
+}
+.dl-modal-2 .modal-dialog .modal-body p {
+  font-size: 18px;
+  width: 65%;
+}
+@media (max-width: 1024px) {
+  .dl-modal-2 .modal-dialog .modal-body p {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+.dl-modal-2 .modal-dialog .modal-body .copy-box {
+  position: relative;
+  margin-top: 30px;
+  padding: 25px;
+  width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .dl-modal-2 .modal-dialog .modal-body .copy-box {
+    width: 100%;
+    margin-top: 15px;
+    padding: 25px 15px;
+  }
+}
+.dl-modal-2 .modal-dialog .modal-body .copy-box .label {
+  font-weight: bold;
+  font-size: 12px;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  padding: 0 10px;
+}
+.dl-modal-2 .modal-dialog .modal-body .copy-box input {
+  text-overflow: ellipsis;
+  border: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 1024px) {
+  .dl-modal-2 .modal-dialog .modal-body .copy-box input {
+    width: 60%;
+  }
+}
+.dl-modal-2 .modal-dialog .modal-body .copy-box input:focus {
+  outline: none;
+  box-shadow: none;
+}
+.dl-modal-2 .modal-dialog .modal-body .copy-box .copy-btn {
+  color: #00b679;
+  font-weight: bold;
+  cursor: pointer;
+}
+.dl-modal-2 .modal-dialog .modal-body .or-box {
+  margin-top: 30px;
+  padding: 25px 0;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1024px) {
+  .dl-modal-2 .modal-dialog .modal-body .or-box {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+.dl-modal-2 .modal-dialog .modal-body .or-box .dash {
+  height: 1px;
+  width: 120px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.dl-modal-2 .modal-dialog .modal-body button {
+  background: #00b679;
+  border-color: #00b679;
+  font-size: 16px;
+  font-weight: bold;
+  width: 400px;
+  padding: 25px;
+  margin-top: 30px;
+}
+@media (max-width: 1024px) {
+  .dl-modal-2 .modal-dialog .modal-body button {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+.dl-modal-2 .modal-dialog .modal-body img {
+  height: 35px;
+  margin: 10px 0;
+}
+.dl-modal-2 .modal-dialog .modal-body span {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+}
+
+.modal-backdrop {
+  background: rgba(0, 182, 121, 0.6);
 }
 
 footer {

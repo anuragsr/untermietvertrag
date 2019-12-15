@@ -1,7 +1,9 @@
 app.factory('utils', function($q, $filter, $rootScope) {
   var def
   // , host = "http://localhost/contract/"
-  , host = ""
+  // , host = ""
+  , host = "https://www.untermietvertrag.com/"
+
   return {
     isMobile: function(){
       if(    navigator.userAgent.match(/Android/i)
@@ -87,6 +89,7 @@ app.factory('utils', function($q, $filter, $rootScope) {
       ){
         // If apple, let user click a link
         s.dlPath = host + path
+        $(".dl-modal-2").modal('hide')
         $(".dl-modal").modal('show')
       } else {
         // Else, download it

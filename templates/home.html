@@ -41,7 +41,7 @@
           <img src="img/save-icon.png" alt=""/>
           <div>Speichem</div>
         </div>
-        <div class="box dl-btn" ng-click="download()">
+        <div class="box dl-btn" ng-click="save()">
           <img class="no-mobile" src="img/download-icon.png" alt=""/>
           <div>Herunterladen</div>
         </div>
@@ -108,7 +108,7 @@
           <div class="hov" ng-click="zoomFn('+')"><i class="fa fa-plus"></i></div>
         </div>
         <div class="b-item b">
-          <button ng-click="download()" class="btn btn-success btn-block">
+          <button ng-click="save()" class="btn btn-success btn-block">
             <img src="img/download-icon.png" alt="">
             <div>Als PDF<br/>Speichern</div>            
           </button>
@@ -126,6 +126,35 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
         </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade dl-modal-2" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">          
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">  
+          <h2>Dein Vertrag ist fertiggestellt.</h2>
+          <p>Du kannst deinen Vertrag direkt runterladen oder einfach als Link verschicken.</p>
+          <div class="copy-box">
+            <div class="label">DEIN PERSONALIERTER LINK</div>
+            <input type="text" ng-model="shareLink" readonly />
+            <div class="copy-btn" data-clipboard-text="{{ shareLink }}">KOPEIREN</div>
+          </div>
+          <div class="or-box">
+            <div class="dash"></div>            
+            <div>ODER</div>            
+            <div class="dash"></div>            
+          </div>
+          <button ng-click="download()" class="btn btn-success">PDF SPEICHERN</button>
+          <img src="img/batch.png" alt="" />
+          <span>434 Bewertungen</span>
+        </div>        
       </div>
     </div>
   </div>
