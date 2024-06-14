@@ -466,10 +466,19 @@
   }
 }
 
+.modal-open .dl-modal-2{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  // @include media(">=tablet") {
+  // }
+}
 .dl-modal-2{
   .modal-dialog{
     @include media(">=tablet") {
+      margin: 0;
       max-width: 50vw;
+      width: 50vw;
     }
     .modal-content{
       border: none;
@@ -494,7 +503,7 @@
         }
       }
       p { 
-        font-size: 18px; width: 65%; 
+        font-size: 18px; width: 50%;
         @include media("<=tablet") {
           font-size: 16px;
           width: 100%;
@@ -528,7 +537,8 @@
           @include media("<=tablet") {
             width: 60%;
           }
-          text-overflow: ellipsis;
+          width: 250px;
+          // text-overflow: ellipsis;
           border: none;
           color: rgba($b, .8);
           &:focus {

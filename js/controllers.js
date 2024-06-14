@@ -54,9 +54,12 @@ app.controller('HomeCtrl', function($scope, $compile, $timeout, utils){
     }
   ]
 
+  s.copyText = "KOPIEREN"  
+
   var doNew = function(p){
     s.docId = utils.getId(6)
-    s.shareLink = "https://www.untermietvertrag.com/#/l/" + s.docId
+    s.shareLink = "untermietvertrag.com/#/l/" + s.docId
+    // s.shareLink = "https://www.untermietvertrag.com/#/l/" + s.docId
     // s.shareLink = "www.envisagecyberart.in/projects/contract/v7-2/#/l/" + s.docId
     // s.shareLink = "127.0.0.1:8080/#/l/" + s.docId
     s.idx = s.pages.indexOf(p)
@@ -93,6 +96,7 @@ app.controller('HomeCtrl', function($scope, $compile, $timeout, utils){
       if(!isAuto){
         // Alert of saved successfully
         // alert(res.message)
+        s.copyText = "KOPIEREN"
         s.showPopup()
       }
     })
@@ -189,11 +193,13 @@ app.controller('HomeCtrl', function($scope, $compile, $timeout, utils){
       clipboard_modal && clipboard_modal.destroy()
     })
   
-    $(".dl-modal-2").on("shown.bs.modal", function() {
+    $(".dl-modal-2").on("shown.bs.modal", function() {      
       clipboard_modal = new ClipboardJS('.copy-btn')
       clipboard_modal.on('success', function(e) {
         e.clearSelection()
-        alert('In die Zwischenablage kopiert - ' + e.text)
+        // alert('In die Zwischenablage kopiert - ' + e.text)
+        s.copyText = "KOPIERT!"
+        s.$apply()
       })
     
       clipboard_modal.on('error', function(e) {

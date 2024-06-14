@@ -17,11 +17,12 @@ div[ui-view]{
 }
 
 .loader-ol{
-  background: rgba($color: $b, $alpha: .7);
+  background: rgba($color: $b, $alpha: 0);
   position: fixed;
   top: 0;
   left: 0;
-  color: $w;
+  // color: $w;
+  color: $b;
   display: table;
   z-index: 3;
 }

@@ -17,11 +17,11 @@ div[ui-view] {
 }
 
 .loader-ol {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0);
   position: fixed;
   top: 0;
   left: 0;
-  color: #fff;
+  color: #000;
   display: table;
   z-index: 3;
 }
@@ -613,9 +613,17 @@ header .title {
   transform: scaleX(-1);
 }
 
+.modal-open .dl-modal-2 {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 1024px) {
   .dl-modal-2 .modal-dialog {
+    margin: 0;
     max-width: 50vw;
+    width: 50vw;
   }
 }
 .dl-modal-2 .modal-dialog .modal-content {
@@ -649,7 +657,7 @@ header .title {
 }
 .dl-modal-2 .modal-dialog .modal-body p {
   font-size: 18px;
-  width: 65%;
+  width: 50%;
 }
 @media (max-width: 1024px) {
   .dl-modal-2 .modal-dialog .modal-body p {
@@ -685,7 +693,7 @@ header .title {
   padding: 0 10px;
 }
 .dl-modal-2 .modal-dialog .modal-body .copy-box input {
-  text-overflow: ellipsis;
+  width: 250px;
   border: none;
   color: rgba(0, 0, 0, 0.8);
 }
